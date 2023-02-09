@@ -1,0 +1,1 @@
+alert("Başımız Sağ Olsun...")
