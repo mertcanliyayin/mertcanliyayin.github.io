@@ -1,9 +1,80 @@
 *{
     padding: 0;
     margin: 0;
+    background-color: #2c2c3e;
+    transition: .5s;
 }
 
 .content{
     display: flex;
     flex-wrap: wrap;
+}
+.video{
+    margin-left: 6rem;
+
+}
+.bar{
+    padding: 1.4rem;
+    position: absolute;
+    top: 0;
+    display: none;
+}
+.bar i{
+    font-size: 3rem;
+    cursor: pointer;
+    color: white;
+}
+.bar i:hover{
+    scale: 1.1;
+}
+.kanalbaslik{
+    color: rgb(136, 134, 134);
+    font-weight: 100;
+    font-size: 1.3rem;
+    background-color: #23233e;
+}
+.navbar{
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding-top: 2rem;
+    border-radius: 1rem;
+    padding-right: 2rem;
+    background-color: #23233e;
+    max-width: max-content;
+    top: 6rem;
+    transition: 0.5s ease;
+    transform: translateX(-100%);
+
+}
+.navbar.active{
+    position: absolute;
+    transform: translateX(0);
+}
+.navbar h2{
+    background-color: #23233e;
+    color: white;
+    font-size: 1.5rem;
+}
+.ayar1{
+    background-color: white;
+    margin-top: 1.3rem;
+    font-size: 1.4rem;
+    padding: 1rem;
+    padding-right: 10rem;
+    width: 15rem;
+}
+
+
+@media(max-width:950px)
+{
+.content{
+    display: flex;
+    flex-wrap: wrap;
+}
+.video{
+    margin-left: 0rem;
+
+}
 }
