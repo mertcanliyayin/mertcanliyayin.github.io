@@ -74,8 +74,8 @@
     margin-top: 2rem;
 }
 
-@media(max-width:950px)
-{
+@media(max-width:950px){
+
 .content{
     display: flex;
     flex-wrap: wrap;
@@ -84,4 +84,16 @@
     margin-left: 0rem;
 
 }
+.bar{
+    background-color: transparent;
+    position:fixed;
+    z-index: 100000;
+    left: 0;
+    top: 0;
 }
+.bar i{
+    background-color: transparent;
+    
+}
+}
+
