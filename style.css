@@ -7,17 +7,25 @@
     transition: .5s;
     font-family: 'Poppins', sans-serif;
 
-}
 
+}
+body{
+    overflow-y: hidden;
+}
 .content{
-    display: flex;
-    flex-wrap: wrap;
     height: 100vh;
-}
-.video{
     margin-left: 6rem;
-
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
+.front,.middle,.back{
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+
 .bar{
     padding: 1.4rem;
     position: absolute;
