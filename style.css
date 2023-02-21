@@ -14,7 +14,7 @@ body{
 }
 .content{
     height: 100vh;
-    margin-left: 6rem;
+    margin-left: 8.5rem;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
