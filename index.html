@@ -1,98 +1,159 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multi TV</title>
-    <link rel="icon" href="https://www.hizliresim.com/ksyfggh" type="image/x-icon"/>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Oswald&family=Poppins:wght@200;400;500&display=swap');
 
-</head>
-<body>
-    <div class="content">
-      <div class="front">
-        <iframe id="video1" width="50%" src="https://www.youtube.com/embed/sd94keSra6A?autoplay=1&mute=1" title="YouTube video player" frameborder="0" autoplay="1" allow="autoplay"  allowfullscreen></iframe>
-        <iframe id="video2" width="50%" src="https://www.youtube.com/embed/L0aI7O5KrVU?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <iframe id="video3" width="50%" src="https://www.youtube.com/embed/XEJM4Hcgd3M?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
-      <div class="middle">
-        <iframe id="video4" width="50%" src="https://www.youtube.com/embed/g4QA9Sh_g_8?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <iframe id="video5" width="50%" src="https://www.youtube.com/embed/xpoetRCJKqY?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>   
-        <iframe id="video6" width="50%" src="https://www.youtube.com/embed/UVPejgEw21c?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
-      <div class="back">
-        <iframe id="video7" width="50%" src="https://www.youtube.com/embed/8YPC2IV7ve0?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <iframe id="video8" width="50%" src="https://www.youtube.com/embed/kbf-Xg-ilWM?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <iframe id="video9" width="50%" src="https://www.youtube.com/embed/eenp_e9_c1Q?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
-    </div>
-        
-    
-    
-    
-    
+*{
+    padding: 0;
+    margin: 0;
+    background-color: #2c2c3e;
+    transition: .5s;
+    font-family: 'Poppins', sans-serif;
 
-<div class="menu">
-<div class="bar">
-    <i class="fa-solid fa-gear"></i>
-</div>
-<div class="navbar">
-    <h2>Mert Canlı Yayın Ayarları</h2>
-    <div class="kanalbaslik">Canlı Yayın Linkinin Son 11 Hanesini Girin</div>
 
-<div class="input">
-    <input value="TV100" class="kanal" type="text">
-    <input value="sd94keSra6A" placeholder="1. Canlı Yayın Linkinin Son 11 Hanesini Girin" type="text" id="ayar1" class="ayar1">
-</div>
+}
+body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.front,.middle,.back{
+    display: flex;
+    flex-wrap: nowrap;
+    height: 33.3vh;
+    width: 85%;
+}
+.content{
+    width: 100%;
+    height: 100%;
+    margin-left: 5rem;
+    margin-right: 5rem;
 
-<div class="input">
-    <input value="Halk TV" class="kanal" type="text">
-    <input value="L0aI7O5KrVU" placeholder="2. Canlı Yayın Linkinin Son 11 Hanesini Girin" id="ayar2" type="text" class="ayar1">
-</div>
+}
+.bar{
+    padding: 1.4rem;
+    position: absolute;
+    top: 0;
+}
+.bar i{
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+}
+.bar i:hover{
+    scale: 1.1;
+}
+.kanalbaslik{
+    color: rgb(136, 134, 134);
+    font-weight: 100;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    background-color: #23233e;
+}
+.navbar{
+    padding-left: 2rem;
+    height: 44rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border-radius: 1rem;
+    padding-top: 1rem;
+    padding-right: 2rem;
+    background-color: #23233e;
+    max-width: max-content;
+    top: 4.5rem;
+    transition: 0.5s ease;
+    transform: translateX(-100%);
 
-<div class="input">
-    <input class="kanal" type="text">
-    <input value="mqSD_fEcEDw" placeholder="3. Canlı Yayın Linkinin Son 11 Hanesini Girin" id="ayar3" type="text" class="ayar1">
-</div>
+}
+.navbar.active{
+    position: absolute;
+    transform: translateX(0);
+}
+.navbar h2{
+    background-color: #23233e;
+    color: white;
+    font-size: 1.5rem;
+}
+.ayar1{
+    background-color: white;
+    margin-top: 1.1rem;
+    font-size: 1.1rem;
+    padding: 0.9rem;
+    width: 20rem;
+    height:.1rem;
+    border-radius: .4rem;
+}
+.input{
+    display: flex; 
+    background-color: transparent;  
+}
+.input .kanal{
+    background-color: white;
+    margin-top: 1.1rem;
+    height: 1.9rem;
+    width: 10rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: .4rem;
+}
+.submit{
+    color: white;
+    margin-left: 20%;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    height: 3rem;
+    width: 14rem;
+    padding: .5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+.submit:hover{
+    scale: 1.1;
+    background-color: rgb(60, 8, 8);
+}
+.menu{
+    position: fixed;
+    top: 0;
+}
+@media(max-width:950px){
 
-<div class="input">
-    <input value="A Haber" class="kanal" type="text">
-    <input value="g4QA9Sh_g_8" placeholder="4. Canlı Yayın Linkinin Son 11 Hanesini Girin" id="ayar4" type="text" class="ayar1">
-</div>
+.content{
+    display: flex;
+    flex-wrap: wrap;
+}
+.video{
+    margin-left: 0rem;
 
-<div class="input">
-    <input value="Artı TV" class="kanal" type="text">
-    <input value="xpoetRCJKqY" placeholder="5. Canlı Yayın Linkinin Son 11 Hanesini Girin" id="ayar5" type="text" class="ayar1">
-</div>
+}
+.bar{
+    background-color: transparent;
+    position:fixed;
+    z-index: 100000;
+    left: 0;
+    top: -.8rem;
+}
+.bar i{
+    background-color: transparent;    
+}
+.navbar{
+    top: 3.6rem;
+    padding-bottom: 2rem;
+}
+.ayar1{
+    height: .6rem;
+    margin-top: .9rem;
+    margin-right: 3.2rem;
+}
+.kanalbaslik{
+    font-size: 1rem;
+    margin-top: .5rem;
+}
+h2{
+    font-size: 1rem;
+}
+.submit{
+    height: 2.8rem;
+    margin-top: .7rem;
+    border-radius: .7rem;
+    margin-left: 20%;
+}
 
-<div class="input">
-    <input value="Haber Global" class="kanal" type="text">
-    <input value="GnNK7fqCkn4" placeholder="6. Canlı Yayın Linkinin Son 11 Hanesini Girin" id="ayar6" type="text" class="ayar1">
-</div>
-
-<div class="input">
-    <input value="TGRT Haber" class="kanal" type="text">
-    <input value="8YPC2IV7ve0" placeholder="7. Canlı Yayın Linkinin Son 11 Hanesini Girin" id="ayar7" type="text" class="ayar1">
-</div>
-
-<div class="input">
-    <input value="Cüneyt Özdemir" class="kanal" type="text">
-    <input value="kbf-Xg-ilWM" placeholder="8. Canlı Yayın Linkinin Son 11 Hanesini Girin" id="ayar8" type="text" class="ayar1">
-</div>
-
-<div class="input">
-    <input value="Tele 1" class="kanal" type="text">
-    <input value="eenp_e9_c1Q" placeholder="9. Canlı Yayın Linkinin Son 11 Hanesini Girin" id="ayar9" type="text" class="ayar1">
-</div>
-    <input class="submit" value="Kanalı Değiştir" type="submit">
-
-</div>
-</div>
-
-<script src="index.js">
-</script>
-</body>
-</html>
+}
 
