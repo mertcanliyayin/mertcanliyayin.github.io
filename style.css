@@ -16,8 +16,8 @@ body{
 .front,.middle,.back{
     display: flex;
     flex-wrap: nowrap;
-    height: 33vh;
-    width: 93%;
+    height: 33.3vh;
+    width: 85%;
 }
 .content{
     width: 100%;
