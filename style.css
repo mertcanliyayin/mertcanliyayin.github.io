@@ -12,27 +12,22 @@
 body{
     overflow-y: hidden;
 }
-.content{
-    height: 100vh;
-    margin-left: 8.5rem;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-}
 .front,.middle,.back{
-    height: 100%;
     display: flex;
     flex-wrap: nowrap;
 }
+.content{
+    margin-left: 5%;
+    margin-right: 2%;
 
-
+}
 .bar{
     padding: 1.4rem;
     position: absolute;
     top: 0;
 }
 .bar i{
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     cursor: pointer;
     color: white;
 }
@@ -156,4 +151,6 @@ h2{
 }
 
 }
+
+
 
