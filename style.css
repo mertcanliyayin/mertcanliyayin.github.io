@@ -113,13 +113,13 @@ body{
 }
 @media(max-width:950px){
     .content{
-        margin-left: 0;
+        margin-left: 0rem;
         margin-right: 0;
         overflow-y: auto;
     }
     .kanallar{
         width: 50vh;
-        height: 23.6%;
+        height: 25.6%;
     }
 
 .bar{
