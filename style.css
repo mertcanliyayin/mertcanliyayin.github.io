@@ -112,6 +112,15 @@ body{
     top: 0;
 }
 @media(max-width:950px){
+    .content{
+        margin-left: 0;
+        margin-right: 0;
+        overflow-y: auto;
+    }
+    .kanallar{
+        width: 60vh;
+        height: 33.3%;
+    }
 
 .bar{
     background-color: transparent;
@@ -122,6 +131,8 @@ body{
 }
 .bar i{
     background-color: transparent;    
+    margin-top: 1rem;
+    font-size: 2.4rem;
 }
 .navbar{
     top: 3.6rem;
@@ -157,5 +168,6 @@ h2{
     }
     
 }
+
 
  
