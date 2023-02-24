@@ -13,18 +13,15 @@ body{
     overflow-y: hidden;
     overflow-x: hidden;
 }
-.front,.middle,.back{
-    display: flex;
-    flex-wrap: nowrap;
-    height: 33.33vh;
-    width: 85.7%;
-}
 .content{
-    width: 100%;
-    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
     margin-left: 5rem;
-    margin-right: 5rem;
-
+    height: 100%;
+}
+.kanallar{
+    width: 33%;
+    height: 33.3vh;
 }
 .bar{
     padding: 1.4rem;
@@ -93,6 +90,7 @@ body{
     font-weight: 500;
     border-radius: .4rem;
 }
+
 .submit{
     color: white;
     margin-left: 20%;
@@ -114,14 +112,6 @@ body{
 }
 @media(max-width:950px){
 
-.content{
-    display: flex;
-    flex-wrap: wrap;
-}
-.video{
-    margin-left: 0rem;
-
-}
 .bar{
     background-color: transparent;
     position:fixed;
@@ -156,5 +146,6 @@ h2{
 }
 
 }
+
 
 
