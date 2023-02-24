@@ -114,12 +114,12 @@ body{
 @media(max-width:950px){
     .content{
         margin-left: -1%;
-        margin-right: 0;
+        margin-right: 1%;
         overflow-y: auto;
     }
     .kanallar{
         width: 50vh;
-        height: 25%;
+        height: 25.3%;
     }
 
 .bar{
